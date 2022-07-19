@@ -1,0 +1,12 @@
+{
+	"productos": [
+		{
+			"id": "0",
+			"nombre": "Raqueta de tenis de mesa",
+			"descripcion": "Es una raqueta para jugar tenis de mesa",
+			"precio": "50.00",
+			"cantidad": "7",
+      "imagen":"https://picsum.photos/200/300"
+		}
+]
+}
