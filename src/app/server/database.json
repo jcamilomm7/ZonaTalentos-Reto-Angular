@@ -7,6 +7,15 @@
 			"precio": "50.00",
 			"cantidad": "7",
       "imagen":"https://picsum.photos/200/300"
+		},
+    {
+			"id": "1",
+			"nombre": "Balon",
+			"descripcion": "Balon de futbol de marca golty original",
+			"precio": "100.00",
+			"cantidad": "20",
+      "imagen":"https://picsum.photos/200/300"
 		}
+
 ]
 }
