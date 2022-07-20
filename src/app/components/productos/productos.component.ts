@@ -10,16 +10,16 @@ import { ProductosService } from 'src/app/services/productos.service';
 export class ProductosComponent implements OnInit {
 
   productos: any
-
+  page: number = 0;
   constructor(private producto: ProductosService) { }
 
   ngOnInit(): void {
-    this.getQuestionsAll();
+    this.getProductsAll();
   }
 
 
-  getQuestionsAll(): void {
-    this.producto.getQuestionAll().subscribe((value) => {
+  getProductsAll(): void {
+    this.producto.getProductsAll().subscribe((value) => {
       this.productos = value
     });
   }

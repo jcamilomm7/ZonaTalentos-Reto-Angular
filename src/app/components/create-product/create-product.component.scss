@@ -1,16 +1,18 @@
-#img-productos{
-  width: 90%;
-  margin-left: 5%;
-  height: 150px;
-
+.container{
+  width: 50%;
+  margin-left: 25%;
 }
 
-.card-productos{
-  height: 400px;
+.titulo-form{
+  text-align: center;
 }
 
-.button{
+
+.btn-agregar{
+  width: 30%;
+  margin-left: 35%;
   background: #009FFF;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to top, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ 
 }

@@ -1,6 +1,9 @@
+
+<app-navbar></app-navbar>
 <div class="container">
   <div class="row">
-    <div *ngFor="let producto of productos" class="col-sm-12 col-md-3 py-4 ">
+    <div *ngFor="let producto of productos
+    | paginate: { itemsPerPage: 8, currentPage: page }" class="col-sm-12 col-md-3 py-4 ">
       <div class="col d-flex justify-content-center mb-4 card-productos">
         <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem">
           <h5 class="card-title pt-2 text-center text-primary">
@@ -25,4 +28,12 @@
       </div>
     </div>
   </div>
+</div>
+
+<div style="text-align: center ">
+  <pagination-controls (pageChange)="page = $event">
+    previousLabel=»Anterior» nextLabel=»Siguiente»
+
+  </pagination-controls>
+
 </div>
