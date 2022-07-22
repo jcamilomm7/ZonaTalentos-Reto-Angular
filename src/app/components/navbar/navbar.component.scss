@@ -6,12 +6,19 @@
   text-decoration: none;
   color: white;
 }
+.probandoFuente{
+  font-family: "Kalam", cursive;
+  font-size: 30px;
+  color: #FF339C;
+}
+
 
 .links:hover{
-  font-size: 20px;
+  font-family: "Kalam", cursive;
    transition: 1.2s;
-   color:#ff4500;
+   color: #FF339C;
    font-weight: 400;
+   font-size: 25px;
 
 
 }

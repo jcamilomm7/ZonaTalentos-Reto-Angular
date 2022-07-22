@@ -1,27 +1,51 @@
-
 <app-navbar></app-navbar>
+
 <div class="container">
   <div class="row">
-    <div *ngFor="let producto of productos
-    | paginate: { itemsPerPage: 8, currentPage: page }" class="col-sm-12 col-md-3 py-4 ">
+    <div
+      *ngFor="
+        let producto of productos
+          | paginate: { itemsPerPage: 8, currentPage: page }
+      "
+      class="col-sm-12 col-md-4 col-lg-3 py-4"
+    >
       <div class="col d-flex justify-content-center mb-4 card-productos">
         <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem">
           <h5 class="card-title pt-2 text-center text-primary">
-            {{producto.nombre}}
+            {{ producto.nombre }}
           </h5>
-          <img id="img-productos" src={{producto.imagen}} class="card-img-top" alt="..." />
+          <img
+            id="img-productos"
+            src="{{ producto.imagen }}"
+            class="card-img-top"
+            alt="..."
+          />
           <div class="card-body">
             <p class="card-text text-white-50 description">
-             {{producto.descripcion}}
+              {{ producto.descripcion }}
             </p>
             <h5 class="text-primary">
-              Precio: <span class="precio">${{producto.precio}}</span>
+              Precio: <span class="precio">${{ producto.precio }}</span>
             </h5>
             <p class="text-primary">
-              Cantidad disponible: {{producto.cantidad}}
+              Cantidad disponible: {{ producto.cantidad }}
             </p>
             <div class="d-grid gap-2">
-              <button class="btn btn-primary button">Añadir a Carrito</button>
+              <button
+                (click)="
+                  addCarrito(
+                    producto.id,
+                    producto.nombre,
+                    producto.descripcion,
+                    producto.precio,
+                    producto.cantidad,
+                    producto.imagen
+                  )
+                "
+                class="btn btn-primary button"
+              >
+                Añadir a Carrito
+              </button>
             </div>
           </div>
         </div>
@@ -30,10 +54,8 @@
   </div>
 </div>
 
-<div style="text-align: center ">
+<div style="text-align: center">
   <pagination-controls (pageChange)="page = $event">
     previousLabel=»Anterior» nextLabel=»Siguiente»
-
   </pagination-controls>
-
 </div>
